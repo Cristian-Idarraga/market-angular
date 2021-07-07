@@ -1,0 +1,22 @@
+<p>demo works!</p>
+<!--String-interpolation: lo llamo desde el component.ts-->
+<input type="text" [(ngModel)]="title"> {{title}}
+<!--condicional dentro de la etiqueta-->
+
+<div *ngIf="title === 'cristian'">
+    <p>esto es cristian</p>
+</div>
+<div [ngSwitch]="title">
+    <p *ngSwitchCase="'nicolas'"> Este es nicolas</p>
+    <p *ngSwitchCase="'julian'"> Este es julian</p>
+    <p *ngSwitchCase="'camilo'"> Este es camilo</p>
+    <p *ngSwitchDefault>No hay match</p>
+</div>
+<button (click)="addItem()">Add item</button>
+<ul>
+    <li *ngIf="items.length === 0">Lista vacia</li>
+    <li *ngFor="let name of items; index as i">
+        {{name}} {{i}}
+        <button (click)="deleteItem(i)">delete</button>
+    </li>
+</ul>
