@@ -5,26 +5,28 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProductComponent } from './components/product.component';
 import { HighlightDirective } from './highlight.directive';
-import { HomeComponent } from './home/home.component';
 import { ProductsComponent } from './products/products.component';
 import { ContactComponent } from './contact/contact.component';
 import { DemoComponent } from './demo/demo.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-import { BannerComponent } from './banner/banner.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { ProductDetailsComponent } from './product-details/product-details.component';
+import { LayoutComponent } from './layout/layout.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductComponent,
     HighlightDirective,
-    HomeComponent,
     ProductsComponent,
     ContactComponent,
     DemoComponent,
     HeaderComponent,
     FooterComponent,
-    BannerComponent,
+    PageNotFoundComponent,
+    ProductDetailsComponent,
+    LayoutComponent,
   ],
   imports: [
     BrowserModule,

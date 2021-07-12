@@ -1,0 +1,23 @@
+.headerlist {
+    background-color: #006e6e;
+    list-style: none;
+    min-height: 35px;
+    display: flex;
+    align-items: center;
+}
+
+li {
+    display: inline-block;
+}
+
+li>a {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+    color: #ffffff;
+    padding: 8px 5px;
+    text-decoration: none;
+}
+
+li>a.active {
+    background-color: #034646;
+}
