@@ -3,7 +3,7 @@ import { PreloadAllModules } from '@angular/router';
 import { RouterModule, Routes } from '@angular/router';
 import { DemoComponent } from './demo/demo.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { ProductDetailsComponent } from './products/product-details/product-details.component';
+import { ProductDetailsComponent } from './products/components/product-details/product-details.component';
 import { LayoutComponent } from './layout/layout.component';
 import { AdminGuard } from './admin.guard';
 
