@@ -1,5 +1,6 @@
-import { Component, Input, Output, EventEmitter } from "@angular/core";
-import { Product } from '../product.model';
+import {Component ,Input ,Output , EventEmitter} from '@angular/core';
+
+import { Product } from 'src/app/product.model';
 
 @Component({
   selector: 'app-product',
@@ -7,6 +8,7 @@ import { Product } from '../product.model';
   styleUrls: ['./product.component.scss']
 })
 export class ProductComponent {
+
   @Input() product: Product = {
     id: "",
     image: "",

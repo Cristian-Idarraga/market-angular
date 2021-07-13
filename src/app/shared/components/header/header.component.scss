@@ -19,5 +19,15 @@ li>a {
 }
 
 li>a.active {
-    background-color: #034646;
+    background-color: #1b5f5f;
+}
+
+li>a:hover {
+    background-color: #dfdfdf;
+    color: #006e6e;
+}
+
+li>a.active:hover {
+    background-color: #1b5f5f;
+    color: #ffffff;
 }
