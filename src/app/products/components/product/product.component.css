@@ -1,0 +1,25 @@
+mat-card {
+  margin: 4px 5px;
+}
+
+.crop-image {
+  height: 300px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.crop-image img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  max-width: 100%;
+}
+
+mat-card-actions button {
+  padding: 5px;
+  margin: 0;
+}
+/*# sourceMappingURL=product.component.css.map */

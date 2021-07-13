@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -6,10 +7,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-
-  constructor() { }
+  
+  static nCarrito: number = 0;
+  
+  constructor(private route: Router) { }
 
   ngOnInit(): void {
   }
 
+  getCont():number{
+    return HeaderComponent.nCarrito;
+  }
+
+  getRoute(): string{
+return this.route.url;
+  }
 }
