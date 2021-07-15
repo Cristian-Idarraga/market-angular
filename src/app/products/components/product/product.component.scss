@@ -1,5 +1,12 @@
     mat-card {
-        margin: 4px 5px;
+        margin: 5px 2px;
+        height: 470px;
+        mat-card-actions {
+            button {
+                padding: 5px;
+                margin: 0;
+            }
+        }
     }
     
     .crop-image {
@@ -13,12 +20,5 @@
             left: 50%;
             transform: translate(-50%, -50%);
             max-width: 100%;
-        }
-    }
-    
-    mat-card-actions {
-        button {
-            padding: 5px;
-            margin: 0;
         }
     }

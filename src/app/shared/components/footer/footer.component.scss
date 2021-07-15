@@ -6,10 +6,7 @@ footer {
     background-color: mat-color($primary);
     .box {
         h3 {
-            color: white;
-        }
-        input {
-            color: white;
+            color: #ffffff;
         }
         ul {
             list-style: none;
@@ -24,4 +21,8 @@ footer {
             }
         }
     }
+}
+
+::placeholder {
+    color: #ffffff;
 }

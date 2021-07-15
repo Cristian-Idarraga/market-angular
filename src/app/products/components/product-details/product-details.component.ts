@@ -18,7 +18,6 @@ export class ProductDetailsComponent implements OnInit {
     this.route.params.subscribe((params: Params) => {
       const id = params.id;
       this.fetchProduct(id);
-      console.log(this.product);
     }) //Escuchamos los cambios de los parametros
   }
 
@@ -28,4 +27,26 @@ export class ProductDetailsComponent implements OnInit {
     })
   }
 
+  createProduct(){
+    const newProduct: Product = {
+      id: "222",
+      title: "nuevo desde angular",
+      image: "assets/images/banner-1.jpg",
+      price: 3000,
+      description: "nuevo producto"
+    }
+    this.produtsService.createProduct(newProduct).subscribe(product => console.log(product));
+  }
+
+  updateProduct(){
+    const upProduct: Partial<Product> = {
+      title: "product",
+      price: 6000,
+    }
+    this.produtsService.updateProduct('222', upProduct).subscribe(product => console.log(product));
+  }
+
+  deleteProduct(){
+    this.produtsService.deletePorduct('222').subscribe(rta => console.log(rta))
+  }
 }
