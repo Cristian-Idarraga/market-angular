@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-
+import { CartService } from 'src/app/core/services/cart/cart.service';
+import { map } from 'rxjs/operators';
+import { Observable } from 'rxjs';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -8,18 +10,19 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
   
-  static nCarrito: number = 0;
+  total$: Observable<number>;
   
-  constructor(private route: Router) { }
+  constructor(private route: Router, private cartService: CartService) {
+    this.total$ = this.cartService.cart$
+    .pipe(
+      map(products => products.length)
+      );
+   }
 
   ngOnInit(): void {
   }
 
-  getCont():number{
-    return HeaderComponent.nCarrito;
-  }
-
   getRoute(): string{
-return this.route.url;
+    return this.route.url;
   }
 }

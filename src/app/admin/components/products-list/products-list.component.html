@@ -1,3 +1,10 @@
+<div class="button-add">
+    <a mat-button routerLink="create" title="add">
+        <span class="add-text">add product </span>
+        <mat-icon mat-button routerLink="create" title="add">add_circle_outline</mat-icon>
+    </a>
+</div>
+
 <table mat-table [dataSource]="products" class="mat-elevation-z8 products-table">
     <ng-container matColumnDef="id">
         <th mat-header-cell *matHeaderCellDef> ID </th>
@@ -17,7 +24,7 @@
     <ng-container matColumnDef="actions">
         <th mat-header-cell *matHeaderCellDef> Actions </th>
         <td mat-cell *matCellDef="let product">
-            <button mat-icon-button title="edit product">
+            <button mat-icon-button title="edit product" [routerLink]="['edit', product.id]">
                 <mat-icon >
                     edit
                 </mat-icon>

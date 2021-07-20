@@ -1,5 +1,5 @@
 import {Component ,Input ,Output , EventEmitter} from '@angular/core';
-
+import { CartService } from 'src/app/core/services/cart/cart.service';
 import { Product } from 'src/app/product.model';
 
 @Component({
@@ -8,6 +8,8 @@ import { Product } from 'src/app/product.model';
   styleUrls: ['./product.component.scss']
 })
 export class ProductComponent {
+
+  constructor(private cartService: CartService){}
 
   @Input() product: Product = {
     id: "",
@@ -22,6 +24,7 @@ export class ProductComponent {
   
   addCart(){
     console.log(`${this.product.title} agregado al carrito`);
-    this.productClicked.emit(this.product.id)
+    this.cartService.addCart(this.product);
+    // this.productClicked.emit(this.product.id)
   }
 }
